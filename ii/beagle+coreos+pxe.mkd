@@ -1,0 +1,11 @@
+Update your board @spiffxp http://beagleboard.org/latest-images
+
+Update and install tooling:
+
+```
+apt-get update
+apt-get upgrade
+apt-get install dnsmasq syslinux-common freeipmi ipmitool openipmi
+```
+ 
+ 
