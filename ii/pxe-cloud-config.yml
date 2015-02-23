@@ -1,0 +1,22 @@
+#cloud-config
+coreos:
+  units:
+    - name: etcd.service
+      command: start
+    - name: fleet.service
+      command: start
+users:
+  - name: core
+    coreos-ssh-import-github-users:
+      - hh
+      - spiffxp
+  - name: hh
+    coreos-ssh-import-github: hh
+    groups:
+      - sudo
+      - docker
+  - name: spiffxp
+    coreos-ssh-import-github: spiffxp
+    groups:
+      - sudo
+      - docker
