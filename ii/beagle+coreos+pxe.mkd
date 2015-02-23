@@ -8,4 +8,6 @@ apt-get upgrade
 apt-get install dnsmasq syslinux-common freeipmi ipmitool openipmi
 ```
  
- 
+``` 
+ipmi-chassis -h 1.1.0.[1-6] -u ADMIN -p ADMIN --chassis-control=power-cycle
+```
