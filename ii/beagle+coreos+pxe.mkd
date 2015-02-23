@@ -7,6 +7,17 @@ apt-get update
 apt-get upgrade
 apt-get install dnsmasq syslinux-common freeipmi ipmitool openipmi
 ```
+
+From https://coreos.com/docs/running-coreos/bare-metal/booting-with-pxe/
+
+```
+cd /tftp
+wget http://stable.release.core-os.net/amd64-usr/current/coreos_production_pxe.vmlinuz
+wget http://stable.release.core-os.net/amd64-usr/current/coreos_production_pxe.vmlinuz.sig
+wget http://stable.release.core-os.net/amd64-usr/current/coreos_production_pxe_image.cpio.gz
+wget http://stable.release.core-os.net/amd64-usr/current/coreos_production_pxe_image.cpio.gz.sig
+```
+ 
  
 ``` 
 ipmi-chassis -h 1.1.0.[1-6] -u ADMIN -p ADMIN --chassis-control=power-cycle
